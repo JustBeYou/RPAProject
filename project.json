@@ -3,6 +3,7 @@
   "description": "",
   "main": "Main.xaml",
   "dependencies": {
+    "System.Data.DataSetExtensions": "[4.6.0-preview3.19128.7]",
     "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.Mail.Activities": "[1.12.3]",
     "UiPath.System.Activities": "[21.10.3]",
