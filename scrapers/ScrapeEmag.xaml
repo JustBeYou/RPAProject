@@ -8,7 +8,7 @@
     </InArgument>
   </this:ScrapeEmag.ProductCodes>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>824,4288.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>776.8,4500</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -119,7 +119,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="ScrapeEmag" sap:VirtualizedContainerService.HintSize="625.6,4224" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ScrapeEmag" sap:VirtualizedContainerService.HintSize="625.6,4435.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="AllProductsInfo">
         <Variable.Default>
@@ -139,13 +139,13 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: eMAG.ro - Libertate în fiecare zi" sap:VirtualizedContainerService.HintSize="584,1647.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="74dc1986-9a2e-48a9-be26-98d30d2b2eaa" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: eMAG.ro - Libertate în fiecare zi" sap:VirtualizedContainerService.HintSize="584,1762.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="74dc1986-9a2e-48a9-be26-98d30d2b2eaa" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="475.2,1430.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="475.2,1545.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="ProductInfo" />
             </Sequence.Variables>
@@ -154,6 +154,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:Comment sap:VirtualizedContainerService.HintSize="433.6,75.2" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Search for the product code and retrieve info" />
             <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
             <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="433.6,1273.6" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
               <ui:ForEach.Body>
@@ -249,13 +250,13 @@
         <uix:TargetApp Area="-9, -9, 1938, 1051" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEOoAABDqAYLTCpgAAAI0SURBVDhPddNPSBRRHAfwNVdXOgRJgYfIkzC/9yQ3IkswPUgLhXhbOzmLpYf+7CH1ki6U1iUIURRaC2JdJbW8uBdXmwIVL5YErXSpzEA7tKlF4qK58/o+d9Ze0/qD721+H+Z934xDnR+8+ECcnzyxzM8GPrDKaIx53r1mNbFp5n01SXX3I9RQ/pyu5VqP/zurvOQwEohz99IyP5P8yCoFAAFATLNaMUF15hg1fhuhG70D1HTMWksNFo8iT5Hkd+4WAEQGQAAQw+QX/dQ8+ZhuHU8v5yAPEBMRCmACWJ9jNWsAkjjCHhCiFtGntT7q1jpcEvAgcbmsAFuf+LmuBeY5BcA9xS7dwxtsqEBQC6z1aHcuSGAgvSyDDsRXfnr0My8/uPuKGJTojJIvqAIPtYDo1tqfSGDxf6A0jFvQcYR6dFA/w7x6lHQJmCMK0KV1vJfApgpYRzDtJaY7wC0owN2fEkhkAGy34N0PSEjgix1Y4aUrAF4AMAAYAAwABgADgAHAAPASQEQCQyogOwDwBiUWzbPqbNyCEx04x8nnwpeYD8AFIA9AHjrYvcaLyGoa2OuAV0wtsPM+vEEZOqiaIP32GDVERulqsXU5qcFSLtKJ2D6kCtnBDoBfOEICR5CfsnhG18cH6WaBtZ4aLB5BQshvG5ChRL8IU1NvkNqc1npqsHwI8aODGIDtfYAtdPAWgN5HbdnW6t/Z4JSF37kQwBXcQgjADIB5ALMAwijxMn5n5U90OP4AxlPE6YUy1qwAAAAASUVORK5CYII=" InformativeScreenshot="13835e551f066d7b18cbb2f914653271.png" Selector="&lt;html app='chrome.exe' title='eMAG.ro - Libertate în fiecare zi'/&gt;" Url="https://www.emag.ro/" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="584,1113.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="584,1209.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,992.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,1088.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="UpdatedPrice" />
             </Sequence.Variables>
@@ -264,6 +265,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:Comment sap:VirtualizedContainerService.HintSize="438.4,56" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Extract price and add to excel" />
             <Assign sap:VirtualizedContainerService.HintSize="438.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">

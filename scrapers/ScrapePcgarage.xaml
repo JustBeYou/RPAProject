@@ -8,7 +8,7 @@
     </InArgument>
   </this:ScrapePcgarage.ProductCodes>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>824,7877.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>776.8,8108</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -120,7 +120,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="ScrapePcgarage" sap:VirtualizedContainerService.HintSize="708.8,7812.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ScrapePcgarage" sap:VirtualizedContainerService.HintSize="708.8,8043.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="AllProductsInfo">
         <Variable.Default>
@@ -140,13 +140,13 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Cel mai tare Mos esti tu - PC Garage" sap:VirtualizedContainerService.HintSize="667.2,4823.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="74dc1986-9a2e-48a9-be26-98d30d2b2eaa" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Cel mai tare Mos esti tu - PC Garage" sap:VirtualizedContainerService.HintSize="667.2,4938.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="74dc1986-9a2e-48a9-be26-98d30d2b2eaa" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="633.6,4606.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="633.6,4721.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="ProductInfo">
                 <Variable.Default>
@@ -159,6 +159,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:Comment sap:VirtualizedContainerService.HintSize="592,75.2" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Input code in site search bar and retrieve info" />
             <Assign sap:VirtualizedContainerService.HintSize="592,61.6" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="sd:DataTable">
@@ -317,7 +318,7 @@
                         <Catch x:TypeArguments="ui:ActivityTimeoutException" sap:VirtualizedContainerService.HintSize="481.6,1629.6" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -459,13 +460,13 @@
         <uix:TargetApp Area="-9, -9, 1938, 1051" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEOoAABDqAYLTCpgAAAGqSURBVDhPpZBdK0NhAMf5BuILiAsZybFceQ0hX8FnUGhWjDltZidDGKGU5mWMMyQ2bOTKmM1so7ANm1y42cuFGzd/z7M1nLycC//619N5/r/fqScDwL/6efglhiWjdH5x+dlk3gSt0bSOheUV36JxNV9UMDdvaF7jN3B7d4dYLIH70APCjxHY7ccYHdcTTEQwOT375vdfIRAIYWt7F5xuBNqhYXDDoxjTT4kL6DgciWBv3wab7TApIJ9L0hUVqDRaPIbDcJw6ce5yQz3ICYaiAoWSfb25DcDtuoDL7UGvkgWrGoCaiAe5IYKJCOQ9yoTX68eJ4ww+/zWi0Sji8QSCwRD6lGzsVwEnLcFYSz2eXuI4dV5gacWEdpk8WUUfi/ZO2TmZFf0ooLCluhC+iX5Y2lrB79jR0dX9TK4+Ho80jzTFfRXoKhlYayTwTGmwVyvBQZUEVJiVnUOhbxEIKLxTnYaLYGlgYC4vSArINjOFCCMQ0OHljBbWuuIkzH/CP/6dRiDQVTA4aCqFtbEMPJMvCtMIBIYmyRGF0iX3f8I0AgFJLimF0hUNgIx3rymuTbCl1wEAAAAASUVORK5CYII=" InformativeScreenshot="6e13362015f95220f4e43092bd194973.png" Selector="&lt;html app='chrome.exe' htmlwindowname='oktab665917113635857' title='Cel mai tare Mos esti tu - PC Garage'/&gt;" Url="https://www.pcgarage.ro/" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="667.2,1433.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="667.2,1548.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,1312.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,1428" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="UpdatedPrice" />
             </Sequence.Variables>
@@ -474,6 +475,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:Comment sap:VirtualizedContainerService.HintSize="438.4,75.2" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Extract price and save to datable that we write inside an excel spreadsheet" />
             <Assign sap:VirtualizedContainerService.HintSize="438.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
@@ -559,14 +561,14 @@
         </InArgument>
       </ui:ForEachRow.DataTable>
     </ui:ForEachRow>
-    <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Website" DefaultValue="pcgarage" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="625.6,188" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_14">
+    <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Website" DefaultValue="pcgarage" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="667.2,188" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_14">
       <ui:AddDataColumn.DataTable>
         <InArgument x:TypeArguments="sd:DataTable">
           <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">AllProductsInfo</CSharpValue>
         </InArgument>
       </ui:AddDataColumn.DataTable>
     </ui:AddDataColumn>
-    <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Date" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="625.6,188" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_15">
+    <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Date" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="667.2,188" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_15">
       <ui:AddDataColumn.DataTable>
         <InArgument x:TypeArguments="sd:DataTable">
           <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">AllProductsInfo</CSharpValue>
@@ -578,7 +580,7 @@
         </InArgument>
       </ui:AddDataColumn.DefaultValue>
     </ui:AddDataColumn>
-    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="625.6,794.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="667.2,794.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
