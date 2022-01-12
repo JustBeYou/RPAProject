@@ -17456,15 +17456,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Iancu\\.nuget\\packages\\": {}
+    "C:\\Users\\mferaru\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "PriceTracking",
       "projectName": "PriceTracking",
-      "projectPath": "P:\\ANUL III\\RPA\\.local",
-      "packagesPath": "C:\\Users\\Iancu\\.nuget\\packages\\",
-      "outputPath": "P:\\ANUL III\\RPA\\.local"
+      "projectPath": "D:\\rpaproject\\.local",
+      "packagesPath": "C:\\Users\\mferaru\\.nuget\\packages\\",
+      "outputPath": "D:\\rpaproject\\.local"
     },
     "frameworks": {
       "net5.0-windows7.0": {
@@ -17495,7 +17495,7 @@
             "version": "[21.10.4, 21.10.4]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Iancu\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\mferaru\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {

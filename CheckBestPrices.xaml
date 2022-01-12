@@ -1,4 +1,10 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CheckBestPrices" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="776.8,2044.8000000000002" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CheckBestPrices" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="ShouldSendMail" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>824,2212.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -85,7 +91,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="&#xA;" DisplayName="CheckBestPrices" sap:VirtualizedContainerService.HintSize="625.6,1980" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="&#xA;" DisplayName="CheckBestPrices" sap:VirtualizedContainerService.HintSize="625.6,2148" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="ProductsHistory">
         <Variable.Default>
@@ -97,6 +103,7 @@
           <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">new System.Data.DataTable();</CSharpValue>
         </Variable.Default>
       </Variable>
+      <Variable x:TypeArguments="x:String" Name="variable1" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -142,30 +149,31 @@
         </ActivityAction>
       </ueab:ExcelProcessScopeX.Body>
     </ueab:ExcelProcessScopeX>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="584,328" sap2010:WorkflowViewState.IdRef="TryCatch_1">
-      <TryCatch.Try>
-        <ui:InvokeCode ContinueOnError="{x:Null}" Code="MinPrices = new DataTable();&#xA;&#xA;&#xA;var column1 = new DataColumn();&#xA;column1.DataType= System.Type.GetType(&quot;System.String&quot;);&#xA;column1.ColumnName = &quot;Code&quot;;&#xA;MinPrices.Columns.Add(column1);&#xA;&#xA;var column2 = new DataColumn();&#xA;column2.DataType= System.Type.GetType(&quot;System.Int32&quot;);&#xA;column2.ColumnName = &quot;Min Price&quot;;&#xA;MinPrices.Columns.Add(column2);&#xA;&#xA;var column3 = new DataColumn();&#xA;column3.DataType= System.Type.GetType(&quot;System.DateTime&quot;);&#xA;column3.ColumnName = &quot;Date&quot;;&#xA;MinPrices.Columns.Add(column3);&#xA;&#xA;var d = new Dictionary&lt;string, int&gt;();&#xA;var minDates = new Dictionary&lt;string, DateTime&gt;();&#xA;var justDates = new Dictionary&lt;string, DateTime&gt;();&#xA;&#xA;var CODE = 3;&#xA;var PRICE = 2;&#xA;var DATE = 5;&#xA;&#xA;for(int i = 0; i &lt; ProductHistory.Rows.Count; i++) {&#xA;&#x9;var row =  ProductHistory.Rows[i];&#xA;&#x9;var rowCode = row[CODE].ToString();&#xA;&#x9;var rowPrice = Int32.Parse(row[PRICE].ToString());&#xA;&#x9;var rowDate = DateTime.Parse(row[DATE].ToString());&#xA;&#x9;&#xA;&#x9;if (!d.ContainsKey(rowCode)) {&#xA;&#x9;&#x9;d.Add(rowCode, rowPrice);&#xA;&#x9;&#x9;justDates.Add(rowCode, rowDate);&#xA;&#x9;} else {&#xA;&#x9;&#x9;if (rowPrice &lt; d[rowCode]) {&#xA;&#x9;&#x9;&#x9;d.Remove(rowCode);&#xA;&#x9;&#x9;&#x9;d.Add(rowCode, rowPrice);&#xA;&#x9;&#x9;&#x9;justDates.Remove(rowCode);&#xA;&#x9;&#x9;&#x9;justDates.Add(rowCode, rowDate);&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;if (!minDates.ContainsKey(rowCode)) {&#xA;&#x9;&#x9;minDates.Add(rowCode, rowDate);&#xA;&#x9;} else {&#xA;&#x9;&#x9;if (DateTime.Compare(rowDate, minDates[rowCode]) &gt; 0) {&#xA;&#x9;&#x9;&#x9;minDates.Remove(rowCode);&#xA;&#x9;&#x9;&#x9;minDates.Add(rowCode, rowDate);&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;foreach( KeyValuePair&lt;string, int&gt; kvp in d ) {&#xA;&#x9;if (DateTime.Compare(justDates[kvp.Key], minDates[kvp.Key]) == 0) {&#xA;&#x9;&#x9;        var row = MinPrices.NewRow();&#xA;&#x9;&#x9;        row[&quot;Code&quot;] = kvp.Key;&#xA;&#x9;&#x9;        row[&quot;Min Price&quot;] = kvp.Value;&#xA;&#x9;&#x9;        row[&quot;Date&quot;] = justDates[kvp.Key] ;&#xA;&#x9;&#x9;        MinPrices.Rows.Add(row);&#xA;&#x9;}&#xA;}" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="333.6,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
-          <ui:InvokeCode.Arguments>
-            <InArgument x:TypeArguments="sd:DataTable" x:Key="ProductHistory">
-              <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">ProductsHistory</CSharpValue>
-            </InArgument>
-            <OutArgument x:TypeArguments="sd:DataTable" x:Key="MinPrices">
-              <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">MinPrices</CSharpReference>
-            </OutArgument>
-          </ui:InvokeCode.Arguments>
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-        </ui:InvokeCode>
-      </TryCatch.Try>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="ShouldSendMail = false;&#xD;&#xA;MinPrices = new DataTable();&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;var column1 = new DataColumn();&#xD;&#xA;column1.DataType= System.Type.GetType(&quot;System.String&quot;);&#xD;&#xA;column1.ColumnName = &quot;Code&quot;;&#xD;&#xA;MinPrices.Columns.Add(column1);&#xD;&#xA;&#xD;&#xA;var column2 = new DataColumn();&#xD;&#xA;column2.DataType= System.Type.GetType(&quot;System.Int32&quot;);&#xD;&#xA;column2.ColumnName = &quot;Min Price&quot;;&#xD;&#xA;MinPrices.Columns.Add(column2);&#xD;&#xA;&#xD;&#xA;var column3 = new DataColumn();&#xD;&#xA;column3.DataType= System.Type.GetType(&quot;System.DateTime&quot;);&#xD;&#xA;column3.ColumnName = &quot;Date&quot;;&#xD;&#xA;MinPrices.Columns.Add(column3);&#xD;&#xA;&#xD;&#xA;var d = new Dictionary&lt;string, int&gt;();&#xD;&#xA;var minDates = new Dictionary&lt;string, DateTime&gt;();&#xD;&#xA;var justDates = new Dictionary&lt;string, DateTime&gt;();&#xD;&#xA;&#xD;&#xA;var CODE = 3;&#xD;&#xA;var PRICE = 2;&#xD;&#xA;var DATE = 5;&#xD;&#xA;&#xD;&#xA;for(int i = 0; i &lt; ProductHistory.Rows.Count; i++) {&#xD;&#xA;&#x9;var row =  ProductHistory.Rows[i];&#xD;&#xA;&#x9;var rowCode = row[CODE].ToString();&#xD;&#xA;&#x9;var rowPrice = Int32.Parse(row[PRICE].ToString());&#xD;&#xA;&#x9;var rowDate = DateTime.Parse(row[DATE].ToString());&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;if (!d.ContainsKey(rowCode)) {&#xD;&#xA;&#x9;&#x9;d.Add(rowCode, rowPrice);&#xD;&#xA;&#x9;&#x9;justDates.Add(rowCode, rowDate);&#xD;&#xA;&#x9;} else {&#xD;&#xA;&#x9;&#x9;if (rowPrice &lt; d[rowCode]) {&#xD;&#xA;&#x9;&#x9;&#x9;d.Remove(rowCode);&#xD;&#xA;&#x9;&#x9;&#x9;d.Add(rowCode, rowPrice);&#xD;&#xA;&#x9;&#x9;&#x9;justDates.Remove(rowCode);&#xD;&#xA;&#x9;&#x9;&#x9;justDates.Add(rowCode, rowDate);&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;if (!minDates.ContainsKey(rowCode)) {&#xD;&#xA;&#x9;&#x9;minDates.Add(rowCode, rowDate);&#xD;&#xA;&#x9;} else {&#xD;&#xA;&#x9;&#x9;if (DateTime.Compare(rowDate, minDates[rowCode]) &gt; 0) {&#xD;&#xA;&#x9;&#x9;&#x9;minDates.Remove(rowCode);&#xD;&#xA;&#x9;&#x9;&#x9;minDates.Add(rowCode, rowDate);&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;foreach( KeyValuePair&lt;string, int&gt; kvp in d ) {&#xD;&#xA;&#x9;if (DateTime.Compare(justDates[kvp.Key], minDates[kvp.Key]) == 0) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;ShouldSendMail = true;&#xD;&#xA;&#x9;&#x9;        var row = MinPrices.NewRow();&#xD;&#xA;&#x9;&#x9;        row[&quot;Code&quot;] = kvp.Key;&#xD;&#xA;&#x9;&#x9;        row[&quot;Min Price&quot;] = kvp.Value;&#xD;&#xA;&#x9;&#x9;        row[&quot;Date&quot;] = justDates[kvp.Key] ;&#xD;&#xA;&#x9;&#x9;        MinPrices.Rows.Add(row);&#xD;&#xA;&#x9;}&#xD;&#xA;}" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="584,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="ProductHistory">
+          <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">ProductsHistory</CSharpValue>
+        </InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="MinPrices">
+          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">MinPrices</CSharpReference>
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="ShouldSendMail">
+          <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">ShouldSendMail</CSharpReference>
+        </OutArgument>
+      </ui:InvokeCode.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeCode>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="584,291.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,163.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
